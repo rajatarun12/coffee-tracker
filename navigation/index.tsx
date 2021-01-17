@@ -8,17 +8,28 @@ import { RootStackParamList } from '../types';
 import BottomTabNavigator from './BottomTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
 
+interface IProps { 
+  colorScheme: ColorSchemeName
+}
+interface IState { }
+class Navigation extends React.Component<IProps, IState>{
+  colorScheme: ColorSchemeName;
+  constructor(props: IProps) { 
+    super(props); 
+    this.colorScheme = this.props.colorScheme;
+  }
+  render() {
+    return (<NavigationContainer
+      linking={LinkingConfiguration}
+      theme={this.colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+      <RootNavigator />
+    </NavigationContainer>);
+  }
+}
+
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
-export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
-  return (
-    <NavigationContainer
-      linking={LinkingConfiguration}
-      theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <RootNavigator />
-    </NavigationContainer>
-  );
-}
+export default Navigation;
 
 // A root stack navigator is often used for displaying modals on top of all other content
 // Read more here: https://reactnavigation.org/docs/modal

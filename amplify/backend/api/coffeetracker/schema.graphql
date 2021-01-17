@@ -1,0 +1,32 @@
+type User
+  @model
+  @key(name: "byUserEmail", fields: ["email"], queryField: "byUserEmail") {
+  id: ID!
+  email: String!
+  name: String!
+  CoffeeTrackers: [CoffeeTracker] @connection(keyName: "byUser", fields: ["id"])
+}
+
+type CoffeeTracker
+  @model
+  @key(name: "byUser", fields: ["userID", "Family", "Notes", "Origin"]) {
+  id: ID!
+  userID: ID!
+  locationName: String!
+  city: String
+  coffeeName: String
+  Family: String
+  Notes: String
+  Origin: String
+  Aroma: Int
+  Flavor: Int
+  Acidity: Int
+  Body: Int
+  Balance: Int
+  Overall: Int
+  BrewType: String
+  Temperature: String
+  WTOCRatio: String
+  BrewTime: String
+  Comments: String
+}

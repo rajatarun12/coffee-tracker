@@ -1,0 +1,20 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-coffeetracker-dev-05604-authRole",
+            "UnauthRoleArn": "arn:aws:iam::239571291755:role/amplify-coffeetracker-dev-05604-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::239571291755:role/amplify-coffeetracker-dev-05604-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-coffeetracker-dev-05604-deployment",
+            "UnauthRoleName": "amplify-coffeetracker-dev-05604-unauthRole",
+            "StackName": "amplify-coffeetracker-dev-05604",
+            "StackId": "arn:aws:cloudformation:us-east-2:239571291755:stack/amplify-coffeetracker-dev-05604/c971ef60-e8ea-11ea-9f0a-0acbc2d9c67a",
+            "AmplifyAppId": "d15l3f1ohtea8a"
+        },
+        "categories": {
+            "auth": {
+                "coffeetracker417639b2": {}
+            }
+        }
+    }
+}

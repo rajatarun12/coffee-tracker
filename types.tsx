@@ -8,5 +8,5 @@ export type BottomTabParamList = {
 };
 
 export type Dashboard = {
-  Dashboard: undefined;
+  " ": undefined;
 };

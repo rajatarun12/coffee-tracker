@@ -24,9 +24,9 @@ function TabOneNavigator() {
   return (
     <TabOneStack.Navigator>
       <TabOneStack.Screen
-        name="Dashboard"
+        name=" "
         component={TabOneScreen}
-        options={{ headerTitle: 'Dashboard' }}
+        options={{headerShown: false}}
       />
     </TabOneStack.Navigator>
   );
